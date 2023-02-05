@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="paulsolovyov" translate="label" sortOrder="999">
+			<label>Paul Solovyov</label>
+		</tab>
+		<section id="richsnippets_section" sortOrder="20" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>Rich Snippets</label>
+			<tab>paulsolovyov</tab>
+			<resource>PaulSolovyov_RichSnippets::config_paulsolovyov_richsnippets</resource>
+            <group id="rich_snippets_group" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Rich Snippets - Organization</label>
+                <field id="enable_disable_rich_snippets" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Enable Rich Snippets?</label>
+                    <comment><![CDATA[Adds Local Business rich snippets. Read more about rich snippets <a href ="https://developers.google.com/search/docs/appearance/structured-data/local-business" target="noopener noreferrer">here</a>]]> </comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+                <field id="org_name" translate="label" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" type="text">
+                    <label>Organization Name</label>
+                    <comment>Please add the name of your Organization / Company / Business</comment>
+                    <validate>required-entry validate-no-html-tags</validate>
+                    <depends>
+                        <field id="enable_disable_rich_snippets">1</field>
+                    </depends>
+                </field>
+                <field id="org_email_address" translate="label" sortOrder="20" showInWebsite="1" showInStore="1" showInDefault="1" type="text">
+                    <label>Email Address</label>
+                    <comment>Please add a contact email for your business</comment>
+                    <validate>validate-email validate-no-html-tags</validate>
+                    <depends>
+                        <field id="enable_disable_rich_snippets">1</field>
+                    </depends>
+                </field>
+                <field id="org_phone_number" translate="label" sortOrder="30" showInWebsite="1" showInStore="1" showInDefault="1" type="text">
+                    <label>Phone Number</label>
+                    <validate>validate-phoneLax validate-no-html-tags</validate>
+                    <comment>Please add contact phone number for your business</comment>
+                    <depends>
+                        <field id="enable_disable_rich_snippets">1</field>
+                    </depends>
+                </field>
+                <field id="org_fax_number" translate="label" sortOrder="40" showInWebsite="1" showInStore="1" showInDefault="1" type="text">
+                    <label>Fax Number</label>
+                    <validate>validate-fax validate-no-html-tags</validate>
+                    <comment>Please add fax number for your business</comment>
+                    <depends>
+                        <field id="enable_disable_rich_snippets">1</field>
+                    </depends>
+                </field>
+                <field id="org_street_address" translate="label" sortOrder="50" showInWebsite="1" showInStore="1" showInDefault="1" type="text">
+                    <label>Street Address</label>
+                    <validate>validate-alphanum-with-spaces validate-no-html-tags</validate>
+                    <comment>Please add street adress of your business</comment>
+                    <depends>
+                        <field id="enable_disable_rich_snippets">1</field>
+                    </depends>
+                </field>
+                <field id="org_postal_code" translate="label" sortOrder="60" showInWebsite="1" showInStore="1" showInDefault="1" type="text">
+                    <label>Postal Code</label>
+                    <validate>validate-alphanum-with-spaces validate-no-html-tags</validate>
+                    <comment>Please add postal code of your business</comment>
+                    <depends>
+                        <field id="enable_disable_rich_snippets">1</field>
+                    </depends>
+                </field>
+                <field id="org_city" translate="label" sortOrder="70" showInWebsite="1" showInStore="1" showInDefault="1" type="text">
+                    <label>City</label>
+                    <validate>validate-alphanum-with-spaces validate-no-html-tags</validate>
+                    <comment>Please add City of your business</comment>
+                    <depends>
+                        <field id="enable_disable_rich_snippets">1</field>
+                    </depends>
+                </field>
+                <field id="org_country" translate="label" sortOrder="80" showInWebsite="1" showInStore="1" showInDefault="1" type="text">
+                    <label>Country</label>
+                    <validate>validate-alphanum-with-spaces validate-no-html-tags</validate>
+                    <comment>Please add Country of your business</comment>
+                    <depends>
+                        <field id="enable_disable_rich_snippets">1</field>
+                    </depends>
+                </field>
+                <field id="org_image" translate="label" sortOrder="90" showInWebsite="1" showInStore="1" showInDefault="1" type="text">
+                    <label>Business Image</label>
+                    <validate>validate-url</validate>
+                    <comment>Please enter business image</comment>
+                    <depends>
+                        <field id="enable_disable_rich_snippets">1</field>
+                    </depends>
+                </field>
+			</group>
+		</section>
+	</system>
+</config>

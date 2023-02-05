@@ -1,0 +1,20 @@
+<?php if($block->isRichSnippetsPluginEnabled()): ?>
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "<?= $escaper->escapeHtml($block->getBusinessName()); ?>",
+        "url": "<?= $escaper->escapeHtml($block->getSiteUrl()); ?>",
+        "email": "<?= $escaper->escapeHtml($block->getBusinessEmailAddress()); ?>",
+        "image": "<?= $escaper->escapeHtml($block->getBusinessImageUrl()); ?>",
+        "telephone": "<?= $escaper->escapeHtml($block->getBusinessPhoneNumber()); ?>",
+        "faxNumber": "<?= $escaper->escapeHtml($block->getBusinessFaxNumber()); ?>",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "<?= $escaper->escapeHtml($block->getBusinessCity()); ?>, <?= $escaper->escapeHtml($block->getBusinessCountry()); ?>",
+            "postalCode": "<?= $escaper->escapeHtml($block->getBusinessPostalCode()); ?>",
+            "streetAddress": "<?= $escaper->escapeHtml($block->getBusinessStreetAddress()); ?>"
+            }
+        }
+    </script>
+<?php endif; ?>

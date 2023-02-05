@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   <body>
+        <referenceBlock name="before.body.end">
+            <block class="PaulSolovyov\RichSnippets\Block\RichSnippetsBlocks" name="paulsolovyov_richsnippets_block" template="richsnippets_block.phtml">
+                <arguments>
+                    <argument name="cache_lifetime" xsi:type="number">86400</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+   </body>
+</page>
