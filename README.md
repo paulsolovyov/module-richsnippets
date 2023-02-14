@@ -12,6 +12,9 @@
 ## Main Functionalities
 Local Business Rich Snippets for Magento 2 Stores
 
+![image](https://user-images.githubusercontent.com/108321336/218647568-2680a5e1-bbbb-49b8-b49c-fe3002e13b59.png)
+
+
 ## Installation
 \* = in production please use the `--keep-generated` option
 
@@ -27,27 +30,9 @@ Local Business Rich Snippets for Magento 2 Stores
 ### Type 2: Composer
 
  - Make the module available in a composer repository for example:
-    - private repository `repo.magento.com`
     - public repository `packagist.org`
     - public github repository as vcs
- - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
  - Install the module composer by running `composer require paulsolovyov/module-richsnippets`
  - enable the module by running `php bin/magento module:enable PaulSolovyov_RichSnippets`
  - apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush`
-
-
-## Configuration
-
-
-
-
-## Specifications
-
-
-
-
-## Attributes
-
-
-
