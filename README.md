@@ -32,7 +32,7 @@ Local Business Rich Snippets for Magento 2 Stores
  - Make the module available in a composer repository for example:
     - public repository `packagist.org`
     - public github repository as vcs
- - Install the module composer by running `composer require paulsolovyov/module-richsnippets`
+ - Install the module composer by running `composer require paulsolovyov/module-richsnippets:dev-master`
  - enable the module by running `php bin/magento module:enable PaulSolovyov_RichSnippets`
  - apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush`
